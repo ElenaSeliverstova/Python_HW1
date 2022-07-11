@@ -1,18 +1,10 @@
 # Напишите программу для проверки истинности утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
 
+x = True
+y = False
+z = True
 
-A = int(input('Введите X '))
-B = int(input('Введите Y '))
-C = int(input('Введите Z '))
-x = A
-y = B
-z = C
+left = not(x or y or z)
+right = not(x) and not(y) and not(z)
 
-bool XYZ = x == A and y == B and z == C
-bool notXYZ != XYZ
-bool notXnotYnotZ = x != A and y != B and z != C
-
-if (notXYZ == notXnotYnotZ):
-    print("Утвеждение истинно")
-else:
-    print("Утверждение ложно")
+print(left == right)
